@@ -1,13 +1,10 @@
 // imports Potion() constructor into test, making Potion a usable variable
 // without this, new Potion() would thrown an error
+const Player = require('../lib/Player');
 const Potion = require('../lib/Potion');
 
 // replaces constructor's implementation with our faked data
 jest.mock('../lib/Potion.js');
-
-console.log(new Potion());
-
-const Player = require('../lib/Player');
 
 // we want players to have a NAME and 3 number properties: HEALTH, STRENGTH, & AGILITY
 test('creates a player object', () => {
